@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    tools:context="com.example.github.dmgj.MainActivity"
+    android:background="@color/abcde">
+    <include layout="@layout/title4"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            >
+
+            <Button
+                android:id="@+id/bt1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="#EE4C73"
+                android:gravity="center"
+                android:textSize="50dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:text="随机点名" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            >
+
+            <Button
+                android:id="@+id/bt2"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="#29C8B6"
+                android:gravity="center"
+                android:textSize="50dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:text="全体点名" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:background="@drawable/zj"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

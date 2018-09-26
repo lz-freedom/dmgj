@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- 首先定义标题栏 -->
+    <RelativeLayout
+        android:id="@+id/biaoti"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background= "#5E90B5">
+        <TextView
+            android:text="全体点名"
+            android:id="@+id/text_title"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <TextView
+        android:text="Android"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:layout_below="@+id/biaoti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

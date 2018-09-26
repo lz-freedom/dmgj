@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.example.github.hellowlrld.R;
 import com.example.github.dmgj.util.SearchAdapter;
 
-public class activity_ss extends Activity implements View.OnClickListener  {
+public class activity_ss extends BaseActivity implements View.OnClickListener  {
 
     private LinearLayout empty;
     private AutoCompleteTextView search;
@@ -24,16 +24,13 @@ public class activity_ss extends Activity implements View.OnClickListener  {
     public static String student [] = new String[200];
 
 
-
-
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_ss;
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        ActivityManager.addActivity(this);
-        setContentView(R.layout.activity_ss);
-        StatusBarCompat.compat(this, R.color.abcd);
-
+    public void initView() {
         Resources res =getResources();
         final String[] str = res.getStringArray(R.array.languages);
         final String[] temp = res.getStringArray(R.array.result);
@@ -103,6 +100,17 @@ public class activity_ss extends Activity implements View.OnClickListener  {
             }});
     }
 
+
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        ActivityManager.addActivity(this);
+//        setContentView(R.layout.activity_ss);
+//        StatusBarCompat.compat(this, R.color.abcd);
+//
+//
+//    }
+
     private String[][] getTwoDimensionalArray(String[] array) {
         String[][] twoDimensionalArray = new String[200][200];
         for (int i = 0; i < array.length; i++) {
@@ -117,12 +125,14 @@ public class activity_ss extends Activity implements View.OnClickListener  {
         return twoDimensionalArray;
     }
 
-    @Override
-    protected void onDestroy() {
+//    @Override
+//    protected void onDestroy() {
+//
+//        super.onDestroy();
+//        ActivityManager.removeActivity(this);
+//    }
 
-        super.onDestroy();
-        ActivityManager.removeActivity(this);
-    }
+
 
     @Override
     public void onClick(View v) {
